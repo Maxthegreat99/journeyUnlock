@@ -122,13 +122,6 @@ namespace journeyUnlock
                 args.Player.SendInfoMessage("[journeyUnlock] /junlock * - unlocks every items.");
                 return;
             }
-            
-            if(args.TPlayer.difficulty != 3)
-            {
-                args.Player.SendErrorMessage("[journeyUnlock] Your character is not in journey mode!");
-                return;
-            }
-
 
             unlock(args.TPlayer, args.Player, args.Parameters[0], true);
         }
@@ -156,12 +149,6 @@ namespace journeyUnlock
 
 
             TSPlayer player = TSPlayer.FindByNameOrID(args.Parameters[0])[0];
-
-            if(player.TPlayer.difficulty != 3)
-            {
-                args.Player.SendErrorMessage("[journeyUnlock] the targeted player's character is not in journey mode!");
-                return;
-            }
 
             unlock(player.TPlayer, args.Player, args.Parameters[1], false);
         }
