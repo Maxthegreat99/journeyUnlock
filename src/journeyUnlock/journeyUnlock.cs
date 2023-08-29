@@ -17,7 +17,7 @@ namespace journeyUnlock
 
         public override string Name => "journeyUnlock";
 
-        public override Version Version => new(1, 0, 0, 0);
+        public override Version Version => new(1, 0, 1, 0);
 
         public journeyUnlock(Main game) : base(game)
         {
