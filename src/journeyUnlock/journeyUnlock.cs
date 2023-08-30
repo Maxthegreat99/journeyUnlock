@@ -50,11 +50,11 @@ namespace journeyUnlock
                 }
                 if (!isSelf)
                 {
-                    TSPlayer.FindByNameOrID(tplayer.name)[0].SendInfoMessage("[journeyUnlock] {0} has unlocked every items for you!", sender.Name);
+                    TSPlayer.FindByNameOrID(tplayer.name)[0].SendInfoMessage("[journeyUnlock] {0} has unlocked every item for you!", sender.Name);
                     sender.SendSuccessMessage("[journeyUnlock] successfully unlocked every items for {0}!", tplayer.name);
                 }
                 else
-                    sender.SendSuccessMessage("[journeyUnlock] successfully unlocked every items!");
+                    sender.SendSuccessMessage("[journeyUnlock] successfully unlocked every item!");
 
                 return;
             }
@@ -69,11 +69,11 @@ namespace journeyUnlock
 
                 if (!isSelf)
                 {
-                    TSPlayer.FindByNameOrID(tplayer.name)[0].SendInfoMessage("[journeyUnlock] {0} has unlocked the [i:{1}] for you!", sender.Name, itemid);
+                    TSPlayer.FindByNameOrID(tplayer.name)[0].SendInfoMessage("[journeyUnlock] {0} has unlocked [i:{1}] for you!", sender.Name, itemid);
                     sender.SendSuccessMessage("[journeyUnlock] successfully unlocked the [i:{0}] for {1}!", itemid, tplayer.name);
                 }
                 else
-                    sender.SendSuccessMessage("[journeyUnlock] successfully unlocked the [i:{0}]!",itemid);
+                    sender.SendSuccessMessage("[journeyUnlock] successfully unlocked [i:{0}]!",itemid);
 
                 return;
             }
@@ -106,11 +106,11 @@ namespace journeyUnlock
 
             if (!isSelf)
             {
-                TSPlayer.FindByNameOrID(tplayer.name)[0].SendInfoMessage("[journeyUnlock] {0} has unlocked the [i:{1}] for you!", sender.Name, itemid);
-                sender.SendSuccessMessage("[journeyUnlock] successfully unlocked the [i:{0}] for {1}!", itemid, tplayer.name);
+                TSPlayer.FindByNameOrID(tplayer.name)[0].SendInfoMessage("[journeyUnlock] {0} has unlocked [i:{1}] for you!", sender.Name, itemid);
+                sender.SendSuccessMessage("[journeyUnlock] successfully unlocked [i:{0}] for {1}!", itemid, tplayer.name);
             }
             else
-                sender.SendSuccessMessage("[journeyUnlock] successfully unlocked the [i:{0}]!", itemid);
+                sender.SendSuccessMessage("[journeyUnlock] successfully unlocked [i:{0}]!", itemid);
         }
 
         private void unlockCommand(CommandArgs args)
